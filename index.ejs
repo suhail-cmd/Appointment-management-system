@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management System</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .home-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .role-selection {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .role-option {
+            width: 40%;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome to the Appointment Management System</h1>
+        <p>Please select your role to proceed:</p>
+
+        <div class="role-selection">
+            <div class="role-option">
+                <h2>Officer</h2>
+                <a href="/signupOfficer" class="btn">Sign Up</a>
+                <a href="/loginOfficer" class="btn">Log In</a>
+            </div>
+            <div class="role-option">
+                <h2>Person</h2>
+                <a href="/signupPerson" class="btn">Sign Up</a>
+                <a href="/loginPerson" class="btn">Log In</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

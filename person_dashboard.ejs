@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .dashboard-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .officers-list {
+            margin-top: 20px;
+        }
+
+        .officer-details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .officer-details iframe {
+            width: 150px;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .officer-details p {
+            margin: 5px 0;
+        }
+
+        .officer-details button {
+            padding: 8px 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .officer-details button:hover {
+            opacity: 0.8;
+        }
+
+        /* Notification box styles */
+        .notification {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #d4edda; /* Green background for success */
+            color: #155724; /* Dark green text */
+            border: 1px solid #c3e6cb;
+        }
+
+        .notification.error {
+            background-color: #f8d7da; /* Red background for errors */
+            color: #721c24; /* Dark red text */
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Requests</a></li>
+        </ul>
+    </nav>
+    <div class="dashboard-container">
+        <h1>Welcome, <%= username %></h1>
+        <h2>Your Profession: <%= profession %></h2>
+
+        <% if (latestRequest) { %>
+            <div class="notification <%= latestRequest.status === 'accepted' ? '' : 'error' %>">
+                <p>Status of your latest request: <%= latestRequest.status.charAt(0).toUpperCase() + latestRequest.status.slice(1) %></p>
+            </div>
+        <% } %>
+
+        <h3>Available Officers:</h3>
+        <div class="officers-list">
+            <% officers.forEach(officer => { %>
+                <div class="officer-details">
+                    <iframe src="<%= officer.profileUrl %>" title="Officer Profile"></iframe>
+                    <p>Name: <%= officer.userName %></p>
+                    <p>Email: <%= officer.email %></p>
+                    <p>Profession: <%= officer.profession %></p>
+                    <button onclick="requestOfficer('<%= officer.email %>')">Request</button>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <script>
+        function requestOfficer(officerEmail) {
+            fetch('/requestOfficer', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ officerEmail, personUsername: '<%= username %>' })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Request sent successfully');
+                } else {
+                    alert('Failed to send request');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

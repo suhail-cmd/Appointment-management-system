@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "original-gangstar",
+    "private_key_id": "3fff66152520a3f23c54deda675aed6eb1135cfe",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCLtw8RZoIE0jzC\nBusJN8Bz+zkAIGfCdEXG6YBhEBdyrB1aZLHEHNzqkB+OlF2Ghc2EpWTErxaJJ+uM\n8wiKe8dMhqrhSTwtB6VLMujxO2I1DQLci1uaW5wel8ybKm1Ow5xpSAxYnhoIL3zy\n+8zwBAuhdHo/E1/H9AXupixnONw5GbR0NaIekJtB8htCQHIjHDyZZvNOToN6cC0C\nM3F0xQje6Mf6jtu3mV8ZZF93cWiyrp2HB/h71zq71VR/LpbWWYD3dsSluYSxoq+H\ntnIPMgv6roY/TZfQI1sFkmtS1dl6VxCxLodckkmSz2Uuj+1NHZeWRtysxjeXmpf/\nvNIS2Qo3AgMBAAECggEACHF1GyeXNuRfoJgbbxCr9DZb4PqUWqd9KgKla/g1eowV\nMAfCyGe4IAK6rXqg1kbSvy/hkZNFKN+9N+TeAMRvLFw9CmVLGiuKnStD8YQVsMAL\nCrnvPLpJin3A8yWSun5OvvwIJvjS+Oipw+NcpKqR611nH9WzZZmFHEF1kH1araad\npTnPon85O4UjvdxBOVbax9GNBKDhTH8H22r3JRDPyrFKslsk5F3BN/4O+33T1CMU\n1RKC/U1tA0DY5JlHqxeOKcCslHCVVGWC2zIRs9S27MkIDATuBACORZBqu+BjjynU\niinZaCcVfrdpMqFsBZUKWuHzTrl8Y6RhHIzdcUr5TQKBgQDE3bbEo0Di1m4hn2C7\nI7iN1aqQ0q5boa5lEN++uSamw6CGG3VksatsruCBMHx9tJgBa+22jqOTgPv2M2jx\nvRii2ZunNvzbsr85QHd/skUTmdJYMU0wwQ/uJWrP+X+Zf0kNmU9mfoOnnY8fzQty\nF+G/lHH5K1FCymhkVqnp7+SiMwKBgQC1rqQKjAeRt9yTzG/BfslRk8j/7iOR7RjC\n53sn40bv02Yo4RTLgTexmaac7LOc0Ja5ki0pBUCwl0IzxHkQRvh0zQlHDWGRPgzp\nQajUs1Hzd0KT69/CCq0FQK4JBW2venbHE7WoiwekZRTW8ZaqyA4+2gboDSdRfA7D\nfDdlRB6b7QKBgFEu5Tn94Loql0wCP4+s0WScIjSKzSA4coR3Cu3JyKior7/d/vFB\nW2H8U9SyvAPSv4SGj4bjF42yeTU0Sii2RDyT5F52jJvFAJqJfT4Js/a7TkTUP/LF\nCt64S23sg7Q3C1cyS84GiiBLF0ST+A5aztuESePo+x/B/H60RmmUZgKFAoGAJV3Y\n4U5xlBfTpxZJ+esAruWNVo39BNtV12hSnR6SjWrWPRwl8cEO2lk2ulm4i00fYuVc\nom4xIuDJPepv19gw65zsBpAK/Btd/m+BsNV8ym1B5TiDGd6mPUlTQgm6yHeQjFtS\nZmrJ1JbxlU+05EUnIOgouXtTFeBFDRG0NwCupvUCgYEAhD3+bwxrRinf+gKStgt6\nAuUyKM2it8ud+zhJEHK0ekAbal0M+2erfF28UPRQ5APTNrkbafElY5Bi/D7y0sFK\n/Q8f7bgvQFOUlD9e1DuADZUBhhMeotO3Gj+OM6tMN9y/K3pkZ2PU/CODzXmYb1fU\nrALIQocJymrkqmuQIUE0FFI=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-nmmui@original-gangstar.iam.gserviceaccount.com",
+    "client_id": "105442322292365135082",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-nmmui%40original-gangstar.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
