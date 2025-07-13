@@ -1,0 +1,52 @@
+#python
+
+start,end = map(int,input().split())
+if start < 10 or end > 99:
+    print("Invalid number")
+else:
+    found = False
+    for i in range(start,end + 1):
+        first_digit = i // 10
+        second_digit = i % 10
+        total = first_digit + second_digit +(first_digit * second_digit)
+        if total == i:
+            print(i,end=" ")
+            found = True
+    if not found:
+        print(-1)
+
+#java
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int start = sc.nextInt();
+        int end =  sc.nextInt();
+        if(start < 10 || end > 99){
+            System.out.print("Invalid number");
+        }
+        else{
+            boolean found = false;
+            for(int i = start;i < end + 1;i++){
+                int first_digit = i / 10;
+                int second_digit = i % 10;
+                int total = first_digit + second_digit + (first_digit * second_digit);
+                if(total == i){
+                    System.out.print(i + " ");
+                    found = true;
+                }
+            
+            }
+            if(!found){
+                System.out.print(-1);
+            }
+            
+        }
+            
+    }
+}
